@@ -13,6 +13,10 @@ final class WelcomeMessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // welcomeMessage.text = "Welcome, \(userName.loginTextField.text)"
+    }
+    
+    @IBAction func logOutButtonAction() {
+        dismiss(animated: true)
     }
 }
