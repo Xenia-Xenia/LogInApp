@@ -31,13 +31,18 @@ final class LoginViewController: UIViewController {
         passwordTextField.text = password
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     override func shouldPerformSegue(
         withIdentifier identifier: String,
         sender: Any?
     ) -> Bool {
-        guard 
+        guard
             loginTextField.text == correctLogin,
-            passwordTextField.text == correctPassword 
+            passwordTextField.text == correctPassword
         else {
             showAlert(
                 withTitle: "Invalid login or password",
@@ -45,8 +50,12 @@ final class LoginViewController: UIViewController {
             )
             return false
         }
-      //  let logInButtonVC = segue.destination as? WelcomeMessageViewController
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeMessageVC = segue.destination as? WelcomeMessageViewController
+        welcomeMessageVC?.userName = loginTextField.text
     }
     
     // MARK: - IB Actions
@@ -63,6 +72,11 @@ final class LoginViewController: UIViewController {
             andMessage: "Your password is BabyGoat 🤫"
         )
     }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        loginTextField.text = ""
+        passwordTextField.text = ""
+    }
 
     // MARK: - Private Methods
     private func showAlert(
@@ -76,6 +90,7 @@ final class LoginViewController: UIViewController {
         )
         let okAction = UIAlertAction(title: "OK", style: .cancel) { _ in
             self.loginTextField.text = ""
+            self.passwordTextField.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
