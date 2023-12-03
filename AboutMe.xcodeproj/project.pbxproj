@@ -13,11 +13,11 @@
 		1DFAA3E42B14ADAF005780EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DFAA3E22B14ADAF005780EB /* Main.storyboard */; };
 		1DFAA3E62B14ADB1005780EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DFAA3E52B14ADB1005780EB /* Assets.xcassets */; };
 		1DFAA3E92B14ADB1005780EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DFAA3E72B14ADB1005780EB /* LaunchScreen.storyboard */; };
-		1DFAA3F12B15D59D005780EB /* WelcomeMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFAA3F02B15D59D005780EB /* WelcomeMessageViewController.swift */; };
+		1DFAA3F12B15D59D005780EB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFAA3F02B15D59D005780EB /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1DFAA3D92B14ADAF005780EB /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DFAA3D92B14ADAF005780EB /* AboutMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFAA3DC2B14ADAF005780EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DFAA3DE2B14ADAF005780EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1DFAA3E02B14ADAF005780EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +25,7 @@
 		1DFAA3E52B14ADB1005780EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DFAA3E82B14ADB1005780EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DFAA3EA2B14ADB1005780EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DFAA3F02B15D59D005780EB /* WelcomeMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageViewController.swift; sourceTree = "<group>"; };
+		1DFAA3F02B15D59D005780EB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,10 +39,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D78A4502B1CBB0400EA0D65 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1DFAA3DC2B14ADAF005780EB /* AppDelegate.swift */,
+				1DFAA3DE2B14ADAF005780EB /* SceneDelegate.swift */,
+				1DFAA3EA2B14ADB1005780EB /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1D78A4512B1CBB1000EA0D65 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1DFAA3E02B14ADAF005780EB /* LoginViewController.swift */,
+				1DFAA3F02B15D59D005780EB /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1D78A4522B1CBBB500EA0D65 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1DFAA3E22B14ADAF005780EB /* Main.storyboard */,
+				1DFAA3E72B14ADB1005780EB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		1DFAA3D02B14ADAF005780EB = {
 			isa = PBXGroup;
 			children = (
-				1DFAA3DB2B14ADAF005780EB /* LoginApp */,
+				1DFAA3DB2B14ADAF005780EB /* AboutMe */,
 				1DFAA3DA2B14ADAF005780EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,32 +78,28 @@
 		1DFAA3DA2B14ADAF005780EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DFAA3D92B14ADAF005780EB /* LoginApp.app */,
+				1DFAA3D92B14ADAF005780EB /* AboutMe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1DFAA3DB2B14ADAF005780EB /* LoginApp */ = {
+		1DFAA3DB2B14ADAF005780EB /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
-				1DFAA3DC2B14ADAF005780EB /* AppDelegate.swift */,
-				1DFAA3DE2B14ADAF005780EB /* SceneDelegate.swift */,
-				1DFAA3E02B14ADAF005780EB /* LoginViewController.swift */,
-				1DFAA3F02B15D59D005780EB /* WelcomeMessageViewController.swift */,
-				1DFAA3E22B14ADAF005780EB /* Main.storyboard */,
+				1D78A4512B1CBB1000EA0D65 /* ViewControllers */,
+				1D78A4522B1CBBB500EA0D65 /* Storyboards */,
+				1D78A4502B1CBB0400EA0D65 /* App */,
 				1DFAA3E52B14ADB1005780EB /* Assets.xcassets */,
-				1DFAA3E72B14ADB1005780EB /* LaunchScreen.storyboard */,
-				1DFAA3EA2B14ADB1005780EB /* Info.plist */,
 			);
-			path = LoginApp;
+			path = AboutMe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1DFAA3D82B14ADAF005780EB /* LoginApp */ = {
+		1DFAA3D82B14ADAF005780EB /* AboutMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DFAA3ED2B14ADB1005780EB /* Build configuration list for PBXNativeTarget "LoginApp" */;
+			buildConfigurationList = 1DFAA3ED2B14ADB1005780EB /* Build configuration list for PBXNativeTarget "AboutMe" */;
 			buildPhases = (
 				1DFAA3D52B14ADAF005780EB /* Sources */,
 				1DFAA3D62B14ADAF005780EB /* Frameworks */,
@@ -85,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = LoginApp;
+			name = AboutMe;
 			productName = LoginApp;
-			productReference = 1DFAA3D92B14ADAF005780EB /* LoginApp.app */;
+			productReference = 1DFAA3D92B14ADAF005780EB /* AboutMe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1DFAA3D42B14ADAF005780EB /* Build configuration list for PBXProject "LoginApp" */;
+			buildConfigurationList = 1DFAA3D42B14ADAF005780EB /* Build configuration list for PBXProject "AboutMe" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1DFAA3D82B14ADAF005780EB /* LoginApp */,
+				1DFAA3D82B14ADAF005780EB /* AboutMe */,
 			);
 		};
 /* End PBXProject section */
@@ -142,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DFAA3E12B14ADAF005780EB /* LoginViewController.swift in Sources */,
-				1DFAA3F12B15D59D005780EB /* WelcomeMessageViewController.swift in Sources */,
+				1DFAA3F12B15D59D005780EB /* WelcomeViewController.swift in Sources */,
 				1DFAA3DD2B14ADAF005780EB /* AppDelegate.swift in Sources */,
 				1DFAA3DF2B14ADAF005780EB /* SceneDelegate.swift in Sources */,
 			);
@@ -298,7 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8P524LWSW9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -309,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.LoginApp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -329,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8P524LWSW9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -340,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.LoginApp;
+				PRODUCT_BUNDLE_IDENTIFIER = org.swiftbook.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -354,7 +378,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DFAA3D42B14ADAF005780EB /* Build configuration list for PBXProject "LoginApp" */ = {
+		1DFAA3D42B14ADAF005780EB /* Build configuration list for PBXProject "AboutMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DFAA3EB2B14ADB1005780EB /* Debug */,
@@ -363,7 +387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DFAA3ED2B14ADB1005780EB /* Build configuration list for PBXNativeTarget "LoginApp" */ = {
+		1DFAA3ED2B14ADB1005780EB /* Build configuration list for PBXNativeTarget "AboutMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DFAA3EE2B14ADB1005780EB /* Debug */,
